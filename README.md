@@ -9,6 +9,12 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 ### Steps:
 1. Downloaded the dataset from Kaggle.
 2. Performed initial data cleaning in Microsoft Excel before importing into Power BI.
+3. Opened up the Power Query Editor and inserted the 'Average price' column with division of 'Total' over 'Quantity' despite existence of 'Unit price' column.
+4. Removed irrelevant columns i.e. 'cogs', 'gross margin percentage', 'gross income', 'City'.
+5. Recoded the 'Customer type' column to replace the value 'Member' with '1' and 'Normal' with '0'.
+6. Recoded the 'Gender' column to replace the value 'Male' with '1' and 'Female' with '0'.
+7. Renamed the 'Product line' column to 'Category'....
+
 
 ...
 
