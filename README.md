@@ -50,9 +50,10 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - 'Mar sales' : sum of 'Total' ,filter 'Month'=March
     - 'Mar Sales Growth vs Feb' : divide difference of 'Mar sales'and 'Feb sales' by 'Feb sales'
     - 'Mar Sales Growth vs Jan' : divide difference of 'Mar sales'and 'Jan sales' by 'Jan sales'
-   ** - String not sure got use or not, checking at DAX Studio**
-11. 'Time (3 hours)'
-12. 'Time (bins)'
+    - 'String_for_cat_button' : to enable string shown on drill through button reflect the filtered value for category
+    - 'String_for_city_button' : to enable string shown on drill through button reflect the filtered value for city 
+11. 'Time (3 hours)' **tbc**
+12. 'Time (bins)' **tbc**
 11. Created measure in table "_Category Sales_":
     - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
     - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
