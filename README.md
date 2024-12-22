@@ -9,21 +9,30 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 ### Steps:
 1. Downloaded the dataset from Kaggle
 2. Performed initial data cleaning in Microsoft Excel before importing into Power BI
-### Power Query Editor - Table no.1 "Sales Jan 2019-Mar 2019":
+### Table no.1 "Sales Jan 2019-Mar 2019":
 3. Opened up the Power Query Editor and inserted the 'Average price' column with division of 'Total' over 'Quantity' despite existence of 'Unit price' column
 4. Removed irrelevant columns i.e. 'cogs', 'gross margin percentage', 'gross income', 'City'
 5. Recoded the 'Customer type' column to replace the value 'Member' with '1' and 'Normal' with '0'
 6. Recoded the 'Gender' column to replace the value 'Male' with '1' and 'Female' with '0'
 7. Renamed the 'Product line' column to 'Category'
-### Power Query Editor - Table no.2 "Branch>City":
+8. Created measure of 'Average Sales Amount'
+9. 
+### Table no.2 "Branch>City":
 8. Loaded the same dataset and updated the column with correct data types
 9. Created the reference table of 'Branch' & 'City'
-### Power Query Editor - Table no.3 "Customer type & gender": 
-10. Created new reference table with columns of "Customer type (code)", "Gender (code)", "Member&Gender" as description column
+10. Created measure of 'Branch contribution' by dividing sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales'
+11. Created measure of 'Category Sales Ranking (Jan-Mar)' with sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order
+### Table no.3 "Customer type & gender": 
+10. Created new reference table with columns of 'Customer type (code)', 'Gender (code)', 'Member&Gender' as description column
 11. Updated the columns with correct data types
-### Power Query Editor - Table no.4 "Category Sales": 
-12. Group by "Total" by "Product line" and renamed as "Category Sales"
+12. Added new columns of 'Gender'& 'Membership' as description for coded columns
+13. Created composite code column 'MemberGender_Key' from 'Customer type (code)'& 'Gender (code)'
+### Table no.4 "Category Sales": 
+12. Group by 'Total' by 'Product line' and renamed as 'Category Sales'
 13. Renamed the 'Product line' column to 'Category'
+### Table no.5 "Calendar": 
+14. Created a calendar table of Jan to March 2019
+15. Inserted columns of 'Month','Month-Year','Day','Month(no)'
 
 
 ...
