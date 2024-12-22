@@ -15,8 +15,16 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 5. Recoded the 'Customer type' column to replace the value 'Member' with '1' and 'Normal' with '0'
 6. Recoded the 'Gender' column to replace the value 'Male' with '1' and 'Female' with '0'
 7. Renamed the 'Product line' column to 'Category'
-8. Created measure of 'Average Sales Amount'
-9. 
+8. Created composite code column 'MemberGender_Key' from 'Customer type (code)'& 'Gender (code)' as a foreign key to connect with reference table "Customer type & gender" later
+9. Created one to many relationships with tables
+    - Customer type & gender (MemberGender_Key) 1-* Sales Jan 2019-Mar 2019 (MemberGender_Key)
+    - Calendar (Date) 1-* Sales Jan 2019-Mar 2019 (Date)
+    - Branch>City (Branch) 1-* Sales Jan 2019-Mar 2019 (Branch)
+    - Category Sales (Category) 1-* Sales Jan 2019-Mar 2019 (Category)
+10. Created measures:
+    - 'Average Sales Amount' with average of 'Total'
+    - 'Feb sales' with sum of 'Total' filter 'Month'=February (AFTER TBC SMOOTH THEN CONTINUE HERE)
+... TBC need rearranged the table creation sequence to make the flow smooth TBC.....
 ### Table no.2 "Branch>City":
 8. Loaded the same dataset and updated the column with correct data types
 9. Created the reference table of 'Branch' & 'City'
@@ -26,13 +34,17 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 10. Created new reference table with columns of 'Customer type (code)', 'Gender (code)', 'Member&Gender' as description column
 11. Updated the columns with correct data types
 12. Added new columns of 'Gender'& 'Membership' as description for coded columns
-13. Created composite code column 'MemberGender_Key' from 'Customer type (code)'& 'Gender (code)'
+13. Created composite code column 'MemberGender_Key' from 'Customer type (code)'& 'Gender (code)' as the primary key
 ### Table no.4 "Category Sales": 
 12. Group by 'Total' by 'Product line' and renamed as 'Category Sales'
 13. Renamed the 'Product line' column to 'Category'
 ### Table no.5 "Calendar": 
 14. Created a calendar table of Jan to March 2019
 15. Inserted columns of 'Month','Month-Year','Day','Month(no)'
+16. Connected this table with 'Date' column of primary table no.1 "Sales Jan 2019-Mar 2019"
+
+
+    
 
 
 ...
