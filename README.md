@@ -43,13 +43,19 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - _Calendar_ (Date) 1-* _Sales Jan 2019-Mar 2019_ (Date)
       
 ### Data transformation after establishing one-to-many relationships: 
-10. Created measures in table "Sales Jan 2019-Mar 2019":
-    - 'Average Sales Amount' : average of 'Total'
-    - 'Feb sales' : sum of 'Total' ,filter 'Month'=February    **(AFTER TBC SMOOTH THEN CONTINUE HERE)**
-      
-11. Created measure in table "Category Sales":
-    - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales'
-    - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order
+10. Created measures in table "_Sales Jan 2019-Mar 2019_":
+    - 'Average Sales Amount' : average of 'Total', shown as metric in form of multi-row card
+    - 'Jan sales' : sum of 'Total' ,filter 'Month'=January
+    - 'Feb sales' : sum of 'Total' ,filter 'Month'=February
+    - 'Mar sales' : sum of 'Total' ,filter 'Month'=March
+    - 'Mar Sales Growth vs Feb' : divide difference of 'Mar sales'and 'Feb sales' by 'Feb sales'
+    - 'Mar Sales Growth vs Jan' : divide difference of 'Mar sales'and 'Jan sales' by 'Jan sales'
+   ** - String not sure got use or not, checking at DAX Studio**
+11. 'Time (3 hours)'
+12. 'Time (bins)'
+11. Created measure in table "_Category Sales_":
+    - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
+    - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
 
 
 
