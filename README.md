@@ -35,6 +35,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 8. Created table, _Calendar_ to define date hierarchies and allow time-based analysis:
     - Created a calendar table of Jan to March 2019
     - Inserted columns of 'Month','Month-Year','Day','Month(no)' as month number
+
 ** tbc feedback after 5-8 **    
 9. Built one to many relationships among tables:
     - _Branch>City_ (Branch) 1-* _Sales Jan 2019-Mar 2019_ (Branch)
