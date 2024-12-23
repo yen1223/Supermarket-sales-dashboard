@@ -58,19 +58,22 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
 
 ### Visualisation on summary page: 
-13. Slicers: 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership'
-14. Multi-row card to provide overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount
-15. Clustered bar charts:
-    - Top cities by sales (with tooltip showing contribution %) 
-    - Top categories by sales (with tooltip showing contribution % and average sales $)
-    - Interactive filter against both charts, and can drill-through to details page at the back
-16. Clustered column charts:
-    - Category sales over three months (with tooltip showing change %, ranking)
+13. Interactive filters with option to drill-through to details page at the back
+14. 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' slicers
+15. Overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount 
+16. Top cities by sales (with contribution %)
+17. Top categories by sales (with contribution % and average sales $) 
+18. Category sales over three months (with change %, ranking)
  
 ### Visualisation on details page filtered by selected city/category: 
-17. Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
-18. Matrix
-...
+19. Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
+20. Interactive dashboard on same page for further filters 
+21. Sales by month shown in matrix (may breakdown to daily)
+22. Rating by month
+23. Hours, payment mode, member type with most sales
+24. Category/branch sales by time
+25. Category contribution % by applying filter on hours
+26. Payment mode (contribution %), member type sales $ by month
 
 ## Conclusion
 This README outlines my process of using Kaggle data to create an interactive and insightful Power BI dashboard. This demonstrates my ability to handle data analysis, transformation, and visualization tasks effectively.
