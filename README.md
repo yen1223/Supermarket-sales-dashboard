@@ -52,17 +52,24 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - 'Mar Sales Growth vs Jan' : divide difference of 'Mar sales'and 'Jan sales' by 'Jan sales'
     - 'String_for_cat_button' : to enable string shown on drill through button reflect the filtered value for category
     - 'String_for_city_button' : to enable string shown on drill through button reflect the filtered value for city 
-11. 'Time (3 hours)' **tbc**
-12. 'Time (bins)' **tbc**
-11. Created measure in table "_Category Sales_":
+11. Created 'Time (3 hours)' ,'Time (bins)' to be applied on clustered column chart to show sales over time
+12. Created measure in table "_Category Sales_":
     - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
     - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
 
-
-
-    
-
-
+### Visualisation on summary page: 
+13. Slicers: 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership'
+14. Multi-row card to provide overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount
+15. Clustered bar charts:
+    - Top cities by sales (with tooltip showing contribution %) 
+    - Top categories by sales (with tooltip showing contribution % and average sales $)
+    - Interactive filter against both charts, and can drill-through to details page at the back
+16. Clustered column charts:
+    - Category sales over three months (with tooltip showing change %, ranking)
+ 
+### Visualisation on details page filtered by selected city/category: 
+17. Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
+18. Matrix
 ...
 
 ## Conclusion
