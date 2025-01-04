@@ -61,14 +61,15 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 | String_for_cat_button | `String_for_cat_button = If(SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category], 0) == 0, "See category details", "See details for " & SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category]))` | Enable string shown on drill through button reflect the filtered value for category|
 | String_for_city_button | `String_for_city_button = If(SELECTEDVALUE('Branch>City'[City], 0) == 0, "See branch details", "See details for " & SELECTEDVALUE('Branch>City'[City]))` | Enable string shown on drill through button reflect the filtered value for city|
 
+12. Created 'Time (3 hours)' ,'Time (bins)' columns to be applied on clustered column chart to show sales over time
+13. Created measures in table _Category Sales_
 
-continue here, tbc, look back feedback 10 onwards
+| Measures🖩            | DAX                                                                | Presented as                            |
+|----------------------|--------------------------------------------------------------------|-----------------------------------------|
+| Branch contribution | `Branch contribution = sum('Sales Jan 2019-Mar 2019'[Total])/sum('Category Sales'[Category Sales])` | Tooltip on top categories in clustered bar chart to show selected branch contribution to category sales|
+| Category Sales Ranking (Jan-Mar) | `Category Sales Ranking (Jan-Mar) = rankx(ALLSELECTED('Sales Jan 2019-Mar 2019'[Category]),CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total])), ,DESC,Dense)` | Tooltip on monthly category sales in clustered column chart|
 
-12. Created 'Time (3 hours)' ,'Time (bins)' to be applied on clustered column chart to show sales over time
-13. Created measure in table _Category Sales_:
-    - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
-    - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
-
+tbc
 ### Visualisation on summary page: 
 13. Interactive filters with option to drill-through to details page at the back
 14. 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' slicers
