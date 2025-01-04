@@ -75,7 +75,12 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
  
 * Interactive filters with option to drill-through to details page at the back  
 * Slicers of 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' **- tbc to add elaboration**
-* Overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount 
+* Overview on
+     * Sales amount
+     * Qty sold
+     * % of changes Mar vs Feb
+     * % of changes Mar vs Jan
+     * Average sales amount 
 * Top cities by sales (with contribution %)
 * Top categories by sales (with contribution % and average sales $) 
 * Category sales over three months (with change %, ranking)
