@@ -42,7 +42,11 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - _Customer type & gender_ (MemberGender_Key) 1-* _Sales Jan 2019-Mar 2019_ (MemberGender_Key)
     - _Category Sales_ (Category) 1-* _Sales Jan 2019-Mar 2019_ (Category)
     - _Calendar_ (Date) 1-* _Sales Jan 2019-Mar 2019_ (Date)
-      
+
+![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Data%20Model.png
+ "Vietnam Supermarket Sales Data Model")
+
+
 ### Data transformation after establishing one-to-many relationships: 
 10. Created measures in table _Sales Jan 2019-Mar 2019_:
     - 'Average Sales Amount' : average of 'Total', shown as metric in form of multi-row card
