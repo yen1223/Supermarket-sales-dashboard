@@ -49,21 +49,21 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 ### Data transformation after establishing one-to-many relationships: 
 10. Created measures in table _Sales Jan 2019-Mar 2019_
 
-      | Measures🖩               | Formula             | Presented as                          |
-      |-------------------------|---------------------|---------------------------------------|
-      | Average Sales Amount    | Average of 'Total'  | Metric in the form of multi-row card  |
-      | Row 2                   | Data 3              | Data 4                                |
+
+| Measures🖩            | DAX                                                                | Presented as                            |
+|----------------------|--------------------------------------------------------------------|-----------------------------------------|
+| Average Sales Amount | `Average Sales Amount = AVERAGE('Sales Jan 2019-Mar 2019'[Total])` | Metric in the form of<br>multi-row card |
+| Jan sales            | `Jan sales = CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total]),'Calendar'[Month]="January")`| Monthly category sales in clustered column chart |
+| Feb sales            | `Feb sales = CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total]),'Calendar'[Month]="February")`| Monthly category sales in clustered column chart |  
+| March sales          | `March sales = CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total]),'Calendar'[Month]="March")`| Monthly category sales in clustered column chart |  
+| Mar Sales Growth vs Feb | `Mar Sales Growth vs Feb = DIVIDE(([March sales]-[Feb sales]),[Feb sales])` | Metric in the form of multi-row card;<br>Tooltip on monthly category sales in clustered column chart|
+| Mar Sales Growth vs Jan | `Mar Sales Growth vs Jan = DIVIDE(([March sales]-[Jan sales]),[Jan sales])` | Metric in the form of multi-row card;<br>Tooltip on monthly category sales in clustered column chart|
+| String_for_cat_button | `String_for_cat_button = If(SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category], 0) == 0, "See category details", "See details for " & SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category]))` | Enable string shown on drill through button reflect the filtered value for category|
+| String_for_city_button | `String_for_city_button = If(SELECTEDVALUE('Branch>City'[City], 0) == 0, "See branch details", "See details for " & SELECTEDVALUE('Branch>City'[City]))` | Enable string shown on drill through button reflect the filtered value for city|
+
 
 continue here, tbc, look back feedback 10 onwards
 
-    - 'Average Sales Amount' : average of 'Total', shown as metric in form of multi-row card
-    - 'Jan sales' : sum of 'Total' ,filter 'Month'=January
-    - 'Feb sales' : sum of 'Total' ,filter 'Month'=February
-    - 'Mar sales' : sum of 'Total' ,filter 'Month'=March
-    - 'Mar Sales Growth vs Feb' : divide difference of 'Mar sales'and 'Feb sales' by 'Feb sales'
-    - 'Mar Sales Growth vs Jan' : divide difference of 'Mar sales'and 'Jan sales' by 'Jan sales'
-    - 'String_for_cat_button' : to enable string shown on drill through button reflect the filtered value for category
-    - 'String_for_city_button' : to enable string shown on drill through button reflect the filtered value for city 
 12. Created 'Time (3 hours)' ,'Time (bins)' to be applied on clustered column chart to show sales over time
 13. Created measure in table _Category Sales_:
     - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
