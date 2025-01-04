@@ -69,14 +69,16 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 | Branch contribution | `Branch contribution = sum('Sales Jan 2019-Mar 2019'[Total])/sum('Category Sales'[Category Sales])` | Tooltip on top categories in clustered bar chart to show selected branch contribution to category sales|
 | Category Sales Ranking (Jan-Mar) | `Category Sales Ranking (Jan-Mar) = rankx(ALLSELECTED('Sales Jan 2019-Mar 2019'[Category]),CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total])), ,DESC,Dense)` | Tooltip on monthly category sales in clustered column chart|
 
-tbc
 ### Visualisation on summary page: 
-13. Interactive filters with option to drill-through to details page at the back
-14. 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' slicers
-15. Overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount 
-16. Top cities by sales (with contribution %)
-17. Top categories by sales (with contribution % and average sales $) 
-18. Category sales over three months (with change %, ranking)
+![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Dashboard_Summary%20Page.png
+ "Vietnam Supermarket Sales Dashboard Summary Page")
+ 
+* Interactive filters with option to drill-through to details page at the back  
+* Slicers of 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' **- tbc to add elaboration**
+* Overview on Sales amount, Qty sold, % of changes Mar vs Feb, % of changes Mar vs Jan, Average sales amount 
+* Top cities by sales (with contribution %)
+* Top categories by sales (with contribution % and average sales $) 
+* Category sales over three months (with change %, ranking)
  
 ### Visualisation on details page filtered by selected city/category: 
 19. Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
