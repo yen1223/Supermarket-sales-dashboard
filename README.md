@@ -86,14 +86,17 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 * Category sales over three months (with change %, ranking)
  
 ### Visualisation on details page filtered by selected city/category: 
-19. Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
-20. Interactive dashboard on same page for further filters 
-21. Sales by month shown in matrix (may breakdown to daily)
-22. Rating by month
-23. Hours, payment mode, member type with most sales
-24. Category/branch sales by time
-25. Category contribution % by applying filter on hours
-26. Payment mode (contribution %), member type sales $ by month
+![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Dashboard_Details%20Page.png
+ "Vietnam Supermarket Sales Dashboard Details Page") By default, it shows overall detailed info. This page could offer insights on promotion planning. 
+ 
+* Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
+* Interactive dashboard on same page for further filters 
+* Sales by month shown in matrix (may breakdown to daily)
+* Customer rating by month
+* Hours, payment mode, member type with most sales
+* Category/branch sales by time
+* Category contribution % by applying filter on hours
+* Payment mode (contribution %), member type sales $ by month
 
 ## Conclusion
 This README outlines my process of using Kaggle data to create an interactive and insightful Power BI dashboard. This demonstrates my ability to handle data analysis, transformation, and visualization tasks effectively.
