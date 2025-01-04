@@ -35,8 +35,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 8. Created table, _Calendar_ to define date hierarchies and allow time-based analysis:
     - Created a calendar table of Jan to March 2019
     - Inserted columns of 'Month','Month-Year','Day','Month(no)' as month number
-
-** tbc feedback after 5-8 **    
+  
 9. Built one to many relationships among tables:
     - _Branch>City_ (Branch) 1-* _Sales Jan 2019-Mar 2019_ (Branch)
     - _Customer type & gender_ (MemberGender_Key) 1-* _Sales Jan 2019-Mar 2019_ (MemberGender_Key)
@@ -48,7 +47,15 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 
 
 ### Data transformation after establishing one-to-many relationships: 
-10. Created measures in table _Sales Jan 2019-Mar 2019_:
+10. Created measures in table _Sales Jan 2019-Mar 2019_
+
+      | Measures🖩               | Formula             | Presented as                          |
+      |-------------------------|---------------------|---------------------------------------|
+      | Average Sales Amount    | Average of 'Total'  | Metric in the form of multi-row card  |
+      | Row 2                   | Data 3              | Data 4                                |
+
+continue here, tbc, look back feedback 10 onwards
+
     - 'Average Sales Amount' : average of 'Total', shown as metric in form of multi-row card
     - 'Jan sales' : sum of 'Total' ,filter 'Month'=January
     - 'Feb sales' : sum of 'Total' ,filter 'Month'=February
@@ -57,8 +64,8 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
     - 'Mar Sales Growth vs Jan' : divide difference of 'Mar sales'and 'Jan sales' by 'Jan sales'
     - 'String_for_cat_button' : to enable string shown on drill through button reflect the filtered value for category
     - 'String_for_city_button' : to enable string shown on drill through button reflect the filtered value for city 
-11. Created 'Time (3 hours)' ,'Time (bins)' to be applied on clustered column chart to show sales over time
-12. Created measure in table _Category Sales_:
+12. Created 'Time (3 hours)' ,'Time (bins)' to be applied on clustered column chart to show sales over time
+13. Created measure in table _Category Sales_:
     - 'Branch contribution' : divide sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") by sum of 'Category Sales', in percentage %
     - 'Category Sales Ranking (Jan-Mar)' : sum of 'Total' sales amount (From "Sales Jan 2019-Mar 2019") in descending order, in integer format
 
