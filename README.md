@@ -13,7 +13,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
    
 3. Opened Power Query Editor and created the first table, naming it _Sales Jan 2019-Mar 2019_
    
-4. Transformation in Table _Sales Jan 2019-Mar 2019_:
+4. Transformed table _Sales Jan 2019-Mar 2019_:
     - Inserted an 'Average price' column by dividing 'Total' by 'Quantity' (despite having a 'Unit price' column)
     - Removed irrelevant columns such as 'cogs', 'gross margin percentage', 'gross income', and 'City'
     - Recoded the 'Customer type' column: replaced 'Member' with '1' and 'Normal' with '0'
