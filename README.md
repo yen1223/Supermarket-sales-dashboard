@@ -75,7 +75,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
  "Vietnam Supermarket Sales Dashboard Summary Page")
  
 * Interactive filters with option to drill-through to details page at the back  
-* Slicers of 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' **- tbc to add elaboration**
+* Slicers of 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' 
 * Enables interaction between charts for further data exploration
 * First presented with overview on
      * Sales amount
@@ -93,17 +93,17 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
  
  By default, it displays overall detailed info. This page could offer insights on promotion planning. 
  
-* Multi-row card stated with the filter applied
-     * If without filter, by default, will show top city/category
+* Multi-row cards stated with the filters applied
+     * If without filter, typically will show top city/category
 * Enables interaction between charts for further data exploration
 * Details (in chart sequence):
      * Sales by month shown in matrix (drill down to daily)
      * Trend of customer rating by month
      * Popular hours of customer purchase, payment mode, gender, member type with most sales
      * Trend of category/branch sales by time
-     * Category contribution % in piechart for after applying filter on hours of customer purchase
+     * Category contribution % in piechart for after applying filter on hours of customer purchase,         to find out focus category over different timing of the days at different branches
         * Vice versa, by selecting one or multiple categories, we can observe the timeslot with most           purchase on the selected category
-     * Similar interaction can be applied on the chart of payment mode contribution chart (by month)        & member type x gender sales $ chart (by month)
+     * Similar interaction can be applied on the chart of payment mode contribution chart (by month)        & member type x gender sales $ chart (by month) when planning collaboration with bank, BNPL          partners and membership programmes
 
 ## Conclusion
 This README outlines my process of using Kaggle data to create an interactive and insightful Power BI dashboard. This demonstrates my ability to handle data analysis, transformation, and visualization tasks effectively.
