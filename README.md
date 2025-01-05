@@ -106,4 +106,4 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
      * Similar interaction can be applied on the chart of payment mode contribution chart (by month)        & member type x gender sales $ chart (by month) when planning collaboration with bank, BNPL          partners and membership programmes
 
 ## Conclusion
-This README outlines my process of using Kaggle data to create an interactive and insightful Power BI dashboard. This demonstrates my ability to handle data analysis, transformation, and visualization tasks effectively.
+This README outlines the step-by-step process of using Kaggle data to create an interactive and insightful Power BI dashboard. It demonstrates my ability to effectively handle data analysis, transformation, and visualization tasks, providing actionable insights for business decision-making.
