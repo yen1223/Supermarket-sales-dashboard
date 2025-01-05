@@ -61,8 +61,9 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 | String_for_cat_button | `String_for_cat_button = If(SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category], 0) == 0, "See category details", "See details for " & SELECTEDVALUE('Sales Jan 2019-Mar 2019'[Category]))` | Enable string shown on drill through button reflect the filtered value for category|
 | String_for_city_button | `String_for_city_button = If(SELECTEDVALUE('Branch>City'[City], 0) == 0, "See branch details", "See details for " & SELECTEDVALUE('Branch>City'[City]))` | Enable string shown on drill through button reflect the filtered value for city|
 
-12. Created 'Time (3 hours)' ,'Time (bins)' columns to be applied on clustered column chart to show sales over time
-13. Created measures in table _Category Sales_
+11. Created 'Time (3 hours)' ,'Time (bins)' columns to be applied on clustered column chart to show sales over time
+    
+12. Created measures in table _Category Sales_
 
 | Measures🖩            | DAX                                                                | Presented as                            |
 |----------------------|--------------------------------------------------------------------|-----------------------------------------|
@@ -75,7 +76,8 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
  
 * Interactive filters with option to drill-through to details page at the back  
 * Slicers of 'City', 'Category', 'Time (3 hours)', 'Gender', 'Membership' **- tbc to add elaboration**
-* Overview on
+* Enables interaction between charts for further data exploration
+* First presented with overview on
      * Sales amount
      * Qty sold
      * % of changes Mar vs Feb
@@ -87,16 +89,21 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
  
 ### Visualisation on details page filtered by selected city/category: 
 ![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Dashboard_Details%20Page.png
- "Vietnam Supermarket Sales Dashboard Details Page") By default, it shows overall detailed info. This page could offer insights on promotion planning. 
+ "Vietnam Supermarket Sales Dashboard Details Page") 
  
-* Multi-row card on top show the filter applied (if without filter, by default showing top city/category in total sales amount)
-* Interactive dashboard on same page for further filters 
-* Sales by month shown in matrix (may breakdown to daily)
-* Customer rating by month
-* Hours, payment mode, member type with most sales
-* Category/branch sales by time
-* Category contribution % by applying filter on hours
-* Payment mode (contribution %), member type sales $ by month
+ By default, it displays overall detailed info. This page could offer insights on promotion planning. 
+ 
+* Multi-row card stated with the filter applied
+     * If without filter, by default, will show top city/category
+* Enables interaction between charts for further data exploration
+* Details (in chart sequence):
+     * Sales by month shown in matrix (drill down to daily)
+     * Trend of customer rating by month
+     * Popular hours of customer purchase, payment mode, gender, member type with most sales
+     * Trend of category/branch sales by time
+     * Category contribution % in piechart for after applying filter on hours of customer purchase
+        * Vice versa, by selecting one or multiple categories, we can observe the timeslot with most           purchase on the selected category
+     * Similar interaction can be applied on the chart of payment mode contribution chart (by month)        & member type x gender sales $ chart (by month)
 
 ## Conclusion
 This README outlines my process of using Kaggle data to create an interactive and insightful Power BI dashboard. This demonstrates my ability to handle data analysis, transformation, and visualization tasks effectively.
