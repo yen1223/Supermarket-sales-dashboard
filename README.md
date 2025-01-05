@@ -8,8 +8,9 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 
 ### Steps:
 1. Downloaded the dataset from Kaggle
+   
 2. Performed initial data cleaning in Microsoft Excel before importing into Power BI
-### Created 4 tables with relationship and _data transformation_ before establishing relationship:
+   
 3. Opened Power Query Editor and created the first table, naming it _Sales Jan 2019-Mar 2019_
    
 4. Transformation in Table _Sales Jan 2019-Mar 2019_:
@@ -45,10 +46,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 ![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Data%20Model.png
  "Vietnam Supermarket Sales Data Model")
 
-
-### Data transformation after establishing one-to-many relationships: 
 10. Created measures in table _Sales Jan 2019-Mar 2019_
-
 
 | Measures🖩            | DAX                                                                | Presented as                            |
 |----------------------|--------------------------------------------------------------------|-----------------------------------------|
@@ -70,7 +68,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 | Branch contribution | `Branch contribution = sum('Sales Jan 2019-Mar 2019'[Total])/sum('Category Sales'[Category Sales])` | Tooltip on top categories in clustered bar chart to show selected branch contribution to category sales|
 | Category Sales Ranking (Jan-Mar) | `Category Sales Ranking (Jan-Mar) = rankx(ALLSELECTED('Sales Jan 2019-Mar 2019'[Category]),CALCULATE(sum('Sales Jan 2019-Mar 2019'[Total])), ,DESC,Dense)` | Tooltip on monthly category sales in clustered column chart|
 
-### Visualisation on summary page: 
+### 13. Visualisation on summary page: 
 ![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Dashboard_Summary%20Page.png
  "Vietnam Supermarket Sales Dashboard Summary Page")
  
@@ -87,7 +85,7 @@ The dataset used for this project was sourced from Kaggle, specifically the supe
 * Top categories by sales (with contribution % and average sales $) 
 * Category sales over three months (with change %, ranking)
  
-### Visualisation on details page filtered by selected city/category: 
+### 14. Visualisation on details page filtered by selected city/category: 
 ![Screenshot](https://github.com/yen1223/Supermarket-sales-dashboard/blob/main/Vietnam%20Supermarket%20Sales%20Dashboard_Details%20Page.png
  "Vietnam Supermarket Sales Dashboard Details Page") 
  
